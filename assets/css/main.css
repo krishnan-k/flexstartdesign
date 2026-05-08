@@ -629,7 +629,7 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -666,6 +666,7 @@ h6 {
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1;
+  font-size: 15px;
 }
 
 .footer .footer-links ul a:hover {
