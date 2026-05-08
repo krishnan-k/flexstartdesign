@@ -219,7 +219,7 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  background: white;
 }
 
 /* Index Page Header on Scroll
@@ -850,7 +850,7 @@ section,
   display: flex;
   align-items: center;
   background: url(../img/hero-bg.png) top center no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .hero h1 {
@@ -903,7 +903,7 @@ section,
 .hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
-  color: var(--default-color);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
@@ -1012,7 +1012,7 @@ section,
 .values .card {
   background-color: var(--surface-color);
   color: var(--default-color);
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: 0.3s;
@@ -1021,15 +1021,17 @@ section,
 }
 
 .values .card img {
-  padding: 30px 50px;
+  padding: 0;
   transition: 0.5s;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .values .card h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 18px;
+  margin-top: 18px;
+  padding-top: 10px;
 }
 
 .values .card:hover {
@@ -1037,7 +1039,7 @@ section,
 }
 
 .values .card:hover img {
-  transform: scale(1);
+  transform: scale(0.98);
 }
 
 /*--------------------------------------------------------------
