@@ -1,20 +1,26 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif; */
+  --default-font: "Manrope", sans-serif;
+  --heading-font: "Manrope", sans-serif;
+  --nav-font: "Manrope", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website.*/
 :root {
-  --background-color: #F8FAFC;
+  --background-color: #ffffff;
+  --dark-background: #000;
   /* Background color for the entire website*/
   --default-color: #444444;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #012970;
+  --heading-color: #000000;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #84CC16;
   /* Accent color that represents your brand on the website. */
+  --text-paragraph: #ffffff;
+  /* Accent Text color*/
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections*/
   --contrast-color: #ffffff;
@@ -148,6 +154,7 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  border-bottom: 1px solid var(--bs-border-color);
 }
 
 .header .logo {
@@ -240,7 +247,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 12px;
+    padding: 18px 25px;
     font-size: 15px;
     font-family: var(--nav-font);
     font-weight: 500;
@@ -531,15 +538,22 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--dark-background);
   font-size: 15px;
   position: relative;
 }
 
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.footer-newsletter .bg-dark {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  background-color: #F9F9F9;
   padding: 50px 0;
 }
 
@@ -651,9 +665,10 @@ h6 {
 
 .footer .footer-links ul a {
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  color: var(--text-paragraph);
   line-height: 1;
   font-size: 15px;
+  font-weight: 400;
 }
 
 .footer .footer-links ul a:hover, .footer .footer-contact a:hover {
@@ -663,7 +678,7 @@ h6 {
 .footer .footer-about a {
   color: var(--heading-color);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   font-family: var(--heading-font);
 }
 
@@ -674,7 +689,7 @@ h6 {
 
 .footer .footer-contact p, .footer .footer-contact a {
   font-size: 14px;
-  color: var(--default-color);
+  color: var(--text-paragraph);
 }
 
 .footer .copyright {
@@ -838,12 +853,12 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
-  padding: 80px 0 60px 0;
+  padding: 150px 0 20px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  /* background: url(../img/hero-bg.png) top center no-repeat; */
   /* background-size: cover; */
 }
 
@@ -868,7 +883,6 @@ section,
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -884,7 +898,7 @@ section,
   transition: 0.3s;
   display: flex;
   align-items: center;
-  
+
 }
 
 .hero .btn-get-started:hover {
@@ -921,7 +935,7 @@ section,
 }
 
 .hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  /* animation: up-down 2s ease-in-out infinite alternate-reverse both */
 }
 
 @media (max-width: 640px) {
@@ -951,7 +965,6 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   padding: 40px;
 }
 
@@ -969,14 +982,14 @@ section,
 }
 
 .about .content p {
-  margin: 15px 0 30px 0;
+  margin: 0;
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
-  padding-top: 15px;
+  padding-top: 8px;
 }
 
-.about .content .btn-read-more {
+.about .content .btn-read-more, .btn-read-more {
   color: var(--contrast-color);
   background: var(--accent-color);
   line-height: 0;
@@ -990,7 +1003,6 @@ section,
   font-family: var(--default-font);
   font-weight: 600;
   font-size: 16px;
-  letter-spacing: 1px;
 }
 
 .about .content .btn-read-more i {
@@ -1001,6 +1013,14 @@ section,
 
 .about .content .btn-read-more:hover i {
   transform: translateX(5px);
+}
+
+.about .content h5 {
+  padding: 30px 0 0;
+}
+
+.key_features_content {
+  padding-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -1099,6 +1119,55 @@ section,
 .features .feature-box:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+
+.features .timeline-line {
+  position: absolute;
+  left: 58px;
+  top: 20px;
+  width: 2px;
+  height: 90%;
+  background: rgba(25, 135, 84, 0.4);
+}
+
+.features .icon-wrapper {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 50%;
+  background: #161616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.features .icon-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #198754;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.book-a-demo {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book-a-demo:hover {
+  background: var(--nav-mobile-background-color);
+  color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
@@ -1800,6 +1869,16 @@ section,
   background-color: var(--accent-color);
 }
 
+.client-logo img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.clients.section h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
 /*--------------------------------------------------------------
 # Recent Posts Section
 --------------------------------------------------------------*/
@@ -1945,13 +2024,16 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-.contact .info-item a, .contact .info-item p{
+
+.contact .info-item a, .contact .info-item p {
   color: var(--default-color);
   font-size: 15px;
 }
-.contact .info-item a:hover{
+
+.contact .info-item a:hover {
   color: var(--accent-color);
 }
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
