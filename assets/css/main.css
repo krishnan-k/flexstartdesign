@@ -25,6 +25,7 @@
   /* The surface color is used as a background of boxed elements within sections*/
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --al-footer-grey: 0 0% 59%;
 }
 
 /* Nav Menu Colors */
@@ -189,6 +190,11 @@ h6 {
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.section p {
+  line-height: 26px !important;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
 @media (max-width: 1200px) {
@@ -665,7 +671,7 @@ h6 {
 
 .footer .footer-links ul a {
   display: inline-block;
-  color: var(--text-paragraph);
+  color: hsl(var(--al-footer-grey));
   line-height: 1;
   font-size: 15px;
   font-weight: 400;
@@ -695,11 +701,12 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+  color: hsl(var(--al-footer-grey));
 }
 
 .footer .credits {
@@ -818,12 +825,18 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
   position: relative;
 }
 
-.section-title h2 {
-  font-size: 13px;
+.section-title h2, .section-inner-title h2, .content h2 {
+  font-size: 35px;
+  margin-top: 10px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.section-title h5 {
+  font-size: 14px;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 8px 20px;
@@ -837,11 +850,10 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   margin: 10px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
   font-family: var(--heading-font);
+  line-height: 28px;
 }
 
 .section-title p .description-title {
@@ -968,7 +980,7 @@ section,
   padding: 40px;
 }
 
-.about .content h3 {
+.about .content h5, .solution h5 {
   font-size: 14px;
   font-weight: 700;
   color: var(--accent-color);
@@ -976,12 +988,11 @@ section,
 }
 
 .about .content h2 {
-  font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 46px;
 }
 
-.about .content p {
+.about .content p, .key_features_content p {
   margin: 0;
   line-height: 24px;
   font-size: 16px;
@@ -1192,7 +1203,7 @@ section,
 
 .alt-features .icon-box p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 0;
 }
 
@@ -1350,6 +1361,14 @@ section,
 
 .services .service-item:hover .icon {
   background: #fff;
+}
+
+/*--------------------------------------------------------------
+# solution Section
+--------------------------------------------------------------*/
+.solution_description {
+  width: 100%;
+  max-width: 900px;
 }
 
 /*--------------------------------------------------------------
@@ -1692,7 +1711,6 @@ section,
 }
 
 .testimonials .testimonial-item p {
-  font-style: italic;
   margin: 0 auto 15px auto;
 }
 
@@ -2362,6 +2380,15 @@ section,
   color: var(--contrast-color);
 }
 
+/*--------------------------------------------------------------
+# Case Study Section
+--------------------------------------------------------------*/
+.case-study h3.solution-title {
+  font-size: 24px;
+}
+.case-study p.solution-desc {
+    color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
 /*--------------------------------------------------------------
 # Blog Details Section
 --------------------------------------------------------------*/
